@@ -1,6 +1,9 @@
 package com.codecool.musiclibrary;
 
+import com.codecool.musiclibrary.logger.Logger;
 import com.codecool.musiclibrary.model.Song;
+import com.codecool.musiclibrary.service.LibraryList;
+import com.codecool.musiclibrary.ui.ConsoleLogger;
 import com.codecool.musiclibrary.ui.MusicLibraryUi;
 
 public class Application {
@@ -28,7 +31,9 @@ public class Application {
     };
 
     public static void main(String[] args) {
-        MusicLibraryUi ui = new MusicLibraryUi();
+        Logger logger = new ConsoleLogger();
+        LibraryList libraryList = new LibraryList(songs);
+        MusicLibraryUi ui = new MusicLibraryUi(logger,libraryList);
         ui.run();
     }
 }
