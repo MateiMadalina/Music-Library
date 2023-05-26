@@ -44,7 +44,7 @@ public class LibraryList implements Library{
     public void displayArtistSong (String artistName){
         LinkedList<Song> copyList = new LinkedList<>();
         for(Song song : melodies){
-            if(song.artist().equals(artistName)){
+            if(song.artist().contains(artistName)){
                 copyList.add(song);
             }
         }
