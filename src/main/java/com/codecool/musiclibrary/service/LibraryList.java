@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.codecool.musiclibrary.model.Song;
 
-public class LibraryList implements Library{
+public class LibraryList implements Library {
     private LinkedList<Song> melodies;
 
     public LibraryList(Song[] songs) {
@@ -37,26 +37,22 @@ public class LibraryList implements Library{
             }
         }
         melodies = (LinkedList<Song>) updatedList;
-
-        // melodies.removeIf(song -> song.title().equals(songName));
     }
 
-    public void displayArtistSong (String artistName){
+    public void displayArtistSong(String artistName) {
         LinkedList<Song> copyList = new LinkedList<>();
-        for(Song song : melodies){
-            if(song.artist().contains(artistName)){
+        for (Song song : melodies) {
+            if (song.artist().contains(artistName)) {
                 copyList.add(song);
             }
         }
 
-        for(Song song : copyList){
+        for (Song song : copyList) {
             System.out.println(song);
         }
     }
 
-    public void clearAll(){
+    public void clearAll() {
         melodies.clear();
     }
-
-
 }

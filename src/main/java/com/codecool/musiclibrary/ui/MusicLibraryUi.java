@@ -54,7 +54,7 @@ public class MusicLibraryUi {
         return scanner.nextInt();
     }
 
-    private  void addSong() {
+    private void addSong() {
         Scanner scanner = new Scanner(System.in);
         logger.logInfo("Enter the title of the song: ");
         String title = scanner.nextLine();
@@ -62,7 +62,7 @@ public class MusicLibraryUi {
         String artist = scanner.nextLine();
         logger.logInfo("Enter the length in seconds of the song: ");
         int lengthInSeconds = scanner.nextInt();
-        Song song = new Song(title,artist,lengthInSeconds);
+        Song song = new Song(title, artist, lengthInSeconds);
         libraryList.addMelody(song);
     }
 
@@ -70,21 +70,21 @@ public class MusicLibraryUi {
         libraryList.songDisplayedAlphabeticalOrder();
     }
 
-    private void searchSong(){
+    private void searchSong() {
         Scanner scanner = new Scanner(System.in);
         logger.logInfo("Enter the name of artist you want to fine a song: ");
         String artistName = scanner.nextLine();
         libraryList.displayArtistSong(artistName);
     }
 
-    private void removeSong(){
-    Scanner scanner = new Scanner(System.in);
-    logger.logInfo("Enter the title of the song you want to remove from the list");
-    String titleToRemove = scanner.nextLine();
-    libraryList.removeSongByName(titleToRemove);
+    private void removeSong() {
+        Scanner scanner = new Scanner(System.in);
+        logger.logInfo("Enter the title of the song you want to remove from the list");
+        String titleToRemove = scanner.nextLine();
+        libraryList.removeSongByName(titleToRemove);
     }
 
-    private void clearAll(){
+    private void clearAll() {
         libraryList.clearAll();
     }
 }

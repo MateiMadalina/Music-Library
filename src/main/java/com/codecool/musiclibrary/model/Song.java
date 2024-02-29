@@ -21,5 +21,4 @@ public record Song(String title, String artist, int lengthInSeconds) {
                 "artist=" + artist + ", " +
                 "lengthInSeconds=" + lengthInSeconds + ']';
     }
-
 }

@@ -33,7 +33,7 @@ public class Application {
     public static void main(String[] args) {
         Logger logger = new ConsoleLogger();
         LibraryList libraryList = new LibraryList(songs);
-        MusicLibraryUi ui = new MusicLibraryUi(logger,libraryList);
+        MusicLibraryUi ui = new MusicLibraryUi(logger, libraryList);
         ui.run();
     }
 }
